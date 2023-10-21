@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/14b888d444.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="header">
+        
+        <div class="container">
+            <img src="e.jpg"/>
+            <nav>
+                <div class="logo"><span>R</span>ohit</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="https://drive.google.com/file/d/1tDOjIKKn3k9dmjGlHfN0tpIKl1nEAbMJ/view?usp=sharing">Download CV</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        
+        </div>
+        <div class="header-text">
+            
+            <h1>Hi, I am <span>Rohit Kumar</span></h1><br>
+            <p>Web Developer</p>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="container">
+             <div class="row">
+                <div class="about-col1">
+                    <img src="rohit.jpeg" height="300px">
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub">About me</h1>
+                    <p>I am Rohit kumar from Patna Bihar.My specilisation is web Development along with this, I have a knowledge of Programming languages as well as MySql in database.</p>
+
+                    <div class="tab-titles">
+                        <div class="tab-links active-link" onclick="opentab('Skills')">Skills</div>
+                        <div class="tab-links" onclick="opentab('Experience')">Experience</div>
+                        <div class="tab-links" onclick="opentab('Education')">Education</div>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        
+                            <ul>
+                                <li><span>UI</span><br>HTML CSS</li>
+                                <li><span>Web devlopment</span><br>Desgin web app</li>
+                                <li><span>App Developer</span><br>Desgin app</li>
+                            </ul>
+                        
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>UI</span><br>Desgin web interface</li>
+                            <li><span>Web devlopment</span><br>Desgin web app</li>
+                            <li><span>App Developer</span><br>Desgin app</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>MCA</span><br>cgpa 6.8</li>
+                            <li><span>BCA</span><br>cgpa 7.45</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+             </div>
+
+        </div>
+
+    </div>
+
+    <!-------services----->
+    <div class="services">
+        <div class="container">
+            <h1 class="sub">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-sharp fa-solid fa-code"></i>
+                    <h2>Web Developer</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standar
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-sharp fa-solid fa-crop-simple"></i>
+                    <h2>App Developer</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standar
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>web Design</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standar
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-----------Portfolio--------->
+    <div class="portfolio">
+        <div class="container">
+            <h1 class="sub">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="healthcare.jpg">
+                    <div class="layer">
+                        <h3>Healthcare System</h3>
+                        <p>This Healthcare system  provides information about nearby doctors with specific department</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="vechile.png" height="400px">
+                    <div class="layer">
+                        <h3>vechile Recomndation System</h3>
+                        <p>This website recomndate customer best vechiles as per their need.</p>
+                        <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                
+                </div>
+                
+                </div>
+                <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        var tablinks=document.getElementsByClassName("tab-links");
+        
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+        }
+       
+    </script>
+</body>
+</html>
